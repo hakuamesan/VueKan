@@ -1,4 +1,5 @@
 # vuekan
+VueJS Kanban Board
 
 ## Project setup
 ```
