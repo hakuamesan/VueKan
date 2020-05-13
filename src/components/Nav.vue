@@ -58,6 +58,8 @@ export default {
         e.preventDefault()
         console.log(JSON.stringify(this.form))
         this.$emit('update-task', { taskName: this.taskName, taskDescription: this.taskDescription})
+        let task = { taskName: this.taskName, taskDescription: this.taskDescription}
+        this.$store.commit('addTask', { columnIndex: 0, task});
         this.$nextTick( ()=> {
           this.$bvModal.hide('show-addTask')
         })
