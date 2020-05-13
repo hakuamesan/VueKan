@@ -1,17 +1,20 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Mynav ></Mynav>
+    <Board></Board>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Mynav from '@/components/Nav.vue'
+import Board from '@/components/Board.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Mynav,
+    Board
   }
 }
 </script>
@@ -23,6 +26,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
+
+#app {
+  @apply container-fluid;
+
+}
+
+
 </style>
