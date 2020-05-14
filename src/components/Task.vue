@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-card >
-      <b-card-text >  {{ this.value.name }} {{ getName() }}  </b-card-text>
+      <b-card-text >  {{ this.value.name }}   </b-card-text>
       <span class="fa fa-trash"
             style="float: right"
             @click="$emit('remove-task')"
