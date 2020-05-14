@@ -4,7 +4,7 @@
           <TaskStatus id="todo" title="Todo" class="col-md" colName="To Do" columnIndex=0></TaskStatus>
           <TaskStatus id="doing" title="Doing" class="col-md" colName="Doing" columnIndex=1></TaskStatus>
           <TaskStatus id="done" title="Done" class="col-md" colName="Done" columnIndex=2></TaskStatus>
-    </div>
+      </div>
     <Archive v-else></Archive>
  </div>
 </template>
@@ -30,15 +30,15 @@ export default {
 
 <style>
 #todo{
-  background-color: blue;
+  background-color: rgba(186,225,255,.7);
 }
 
 #doing{
-  background-color: yellow;
+  background-color: rgba(255,223,186,.7);
 }
 
 #done{
-  background-color: green;
+  background-color: rgba(186,255,201,.7);
 }
 
 .col-sm, .row, .column {
@@ -61,6 +61,8 @@ export default {
   cursor: pointer;
 }
 
-
+.body {
+  color: #2c3e50;
+}
 </style>
 
