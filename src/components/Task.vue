@@ -3,7 +3,7 @@
     <b-card >
       <div id="tname">  {{ value.taskName }}</div><div id="tdate">  {{ getDate() }} </div>
       <div class="fa fa-trash"
-            style="float: right"
+            style="display: flex; float: right"
             @click="$emit('remove-task')"
             title="Remove Task"></div>
 
@@ -43,6 +43,7 @@ text-align: left;
 }
 
 #tdate{
+  display: flex;
   text-align: right;
   color: darkgreen;
 }
