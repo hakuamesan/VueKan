@@ -27,7 +27,11 @@ export const store = new Vuex.Store({
     },
     addTask (state, { columnIndex, task }) {
       state.columns[columnIndex].tasks.push(task)
-    }
+    },
+    updateTasks (state, { columnIndex, tasks }) {
+      state.columns[columnIndex].tasks = tasks
+    },
+
   }
 });
 

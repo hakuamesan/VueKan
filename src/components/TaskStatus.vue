@@ -6,6 +6,7 @@
       <Task v-for="(task, index) in tasks" 
         :key="task.name" 
         :value="task"
+        @update-task="updateTask(index, $event)"
         @remove-task="removeTask(index)"
         ></Task>
     </draggable>
@@ -55,6 +56,14 @@ export default{
         taskIndex
       })
     },
+  updateTask: function(taskIndex, { taskName, taskDescription}) {
+      this.$store.commit('updateTask', {
+        columnIndex: this.columnIndex,
+        taskIndex,
+        taskName,
+        taskDescription
+      })
+    }
  
   }
 }
