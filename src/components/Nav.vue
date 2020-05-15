@@ -3,7 +3,7 @@
   <b-navbar toggleable="lg" type="dark" variant="info">
     <b-navbar-brand href="#">VueKan</b-navbar-brand>
     <b-navbar-nav class="ml-auto">
-      <b-button size="sm" class="my-2 my-sm-0" v-b-modal.show-addTask >New Task</b-button>
+      <b-button size="sm" class="my-2 my-sm-0" v-b-modal.show-addTask accesskey="n">New Task</b-button>
     </b-navbar-nav>
 
     <b-modal id="show-addTask" centered title="Add Task" @ok="onSubmit">

@@ -47,7 +47,8 @@ export default{
 }*/
 
 #tname{
-text-align: left;
+  text-align: left;
+  padding-bottom: .5rem;
 }
 
 #tdate{
