@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-card >
-      <b-card-text >  {{ value.taskName }}   </b-card-text>
+      <b-card-text >  {{ value.taskName }}  {{ getDate() }} </b-card-text>
       <span class="fa fa-trash"
             style="float: right"
             @click="$emit('remove-task')"
@@ -24,7 +24,16 @@ export default{
       viewDesc: false
     }
   },
-  
+  methods: {
+    getDate() {
+      if ( this.value.taskDate === '' || this.value.taskDate === undefined) return ''
+
+     let d = new Date(this.value.taskDate);
+      console.log(d.toDateString())
+
+      return d.toDateString()
+    }
+  }
 }
 </script>
 

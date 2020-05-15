@@ -34,9 +34,9 @@ export const store = new Vuex.Store({
     updateTasks (state, { columnIndex, tasks }) {
       state.columns[columnIndex].tasks = tasks
     },
-    updateTask (state, { columnIndex, taskIndex, taskName, taskDescription }) {
+    updateTask (state, { columnIndex, taskIndex, taskName, taskDate}) {
       state.columns[columnIndex].tasks[taskIndex].name = taskName
-      state.columns[columnIndex].tasks[taskIndex].description = taskDescription
+      state.columns[columnIndex].tasks[taskIndex].description = taskDate
     },
 
 
