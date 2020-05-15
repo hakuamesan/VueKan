@@ -1,5 +1,5 @@
 <template>
- <div class="">
+ <div id="myboard" class="">
     <div class="row" >
           <TaskStatus id="todo" title="Todo" class="col-md" colName="To Do" columnIndex=0></TaskStatus>
           <TaskStatus id="doing" title="Doing" class="col-md" colName="Doing" columnIndex=1></TaskStatus>
@@ -25,6 +25,10 @@ export default {
 </script>
 
 <style>
+
+html, body, #myboard {
+  background-color: rgba(186,255,255,.5);
+}
 #todo{
   background-color: rgba(186,225,255,.7);
 }
@@ -39,10 +43,13 @@ export default {
 
 .col-sm, .row, .column {
   height: 100%;
+  width: 100%;
+  padding-left: 1rem;
 }
 .col-sm {
   border-left: 0.5rem solid #EFEFEF;
   padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .col-sm:first-child {
   border-left: 0;
