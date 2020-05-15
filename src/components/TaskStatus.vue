@@ -10,6 +10,7 @@
         @remove-task="removeTask(index)"
         ></Task>
     </draggable>
+    <div id="counter"> Count: {{ getCount() }} tasks </div>
   </div>
 </template>
 
@@ -26,6 +27,10 @@ export default{
   components: {
     draggable,
     Task
+  },
+  data(){
+    return {
+    }
   },
   computed: {
      tasks: {
@@ -56,13 +61,16 @@ export default{
         taskIndex
       })
     },
-  updateTask: function(taskIndex, { taskName, taskDescription}) {
+    updateTask: function(taskIndex, { taskName, taskDescription}) {
       this.$store.commit('updateTask', {
         columnIndex: this.columnIndex,
         taskIndex,
         taskName,
         taskDescription
       })
+    },
+    getCount(){
+      return this.$store.state.columns[this.columnIndex].tasks.length
     }
  
   }
@@ -73,6 +81,13 @@ export default{
 .column-title {
   font-style: bold;
   font-size: 1.5rem;
+}
+
+#counter {
+  background-color: white;
+  margin-top: 1rem;
+  text-align: left;
+
 }
 </style>
 
