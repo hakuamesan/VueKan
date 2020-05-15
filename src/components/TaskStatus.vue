@@ -70,6 +70,9 @@ export default{
 </script>
 
 <style>
-
+.column-title {
+  font-style: bold;
+  font-size: 1.5rem;
+}
 </style>
 

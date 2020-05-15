@@ -22,7 +22,7 @@
         ></b-form-input>
       </b-form-group>
 
-      <b-form-group id="input-group-2" label="Date:" label-for="taskDate">
+      <b-form-group id="input-group-2" label="Due Date:" label-for="taskDate">
 <!--        <b-calendar
           id="taskDate"
           v-model="taskDate"

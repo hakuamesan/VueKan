@@ -1,12 +1,15 @@
 <template>
   <div class="mt-3">
     <b-card >
-      <div id="tname">  {{ value.taskName }}</div><div id="tdate">  {{ getDate() }} </div>
-      <div class="fa fa-trash"
+      <div id="tname">  {{ value.taskName }}</div>
+
+      <div class="flex-container">
+      <div id="tdate">  {{ getDate() }} </div>
+      <div id="trash" class="fa fa-trash"
             style="display: flex; float: right"
             @click="$emit('remove-task')"
             title="Remove Task"></div>
-
+      </div>
     </b-card>
 
 
@@ -38,16 +41,24 @@ export default{
 </script>
 
 <style>
+/*
+*{
+  outline: 1px solid red;
+}*/
+
 #tname{
 text-align: left;
 }
 
 #tdate{
-  display: flex;
   text-align: right;
   color: darkgreen;
 }
 
+.flex-container{
+  display: flex;
+  justify-content: space-between;
+}
 b-card {
   padding: 0.5rem;
   margin-bottom: .5rem;
