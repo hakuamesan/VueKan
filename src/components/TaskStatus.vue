@@ -21,7 +21,7 @@ export default{
   name: 'TaskStatus',
   props: {
     colName: String,
-    columnIndex: Number
+    columnIndex: String
   },
   components: {
     draggable,

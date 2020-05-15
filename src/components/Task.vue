@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-card >
-      <b-card-text >  {{ this.value.name }}   </b-card-text>
+      <b-card-text >  {{ value.taskName }}   </b-card-text>
       <span class="fa fa-trash"
             style="float: right"
             @click="$emit('remove-task')"
@@ -24,13 +24,7 @@ export default{
       viewDesc: false
     }
   },
-  methods: {
-    getName() {
-      console.log("name=" + this.value.name);
-    }
-
-  }
-
+  
 }
 </script>
 

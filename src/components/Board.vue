@@ -1,28 +1,24 @@
 <template>
  <div class="">
-    <div class="row" v-if="!viewArchive">
+    <div class="row" >
           <TaskStatus id="todo" title="Todo" class="col-md" colName="To Do" columnIndex=0></TaskStatus>
           <TaskStatus id="doing" title="Doing" class="col-md" colName="Doing" columnIndex=1></TaskStatus>
           <TaskStatus id="done" title="Done" class="col-md" colName="Done" columnIndex=2></TaskStatus>
       </div>
-    <Archive v-else></Archive>
  </div>
 </template>
 
 <script>
 import TaskStatus from '@/components/TaskStatus';
-import Archive from '@/components/Archive'
 
 export default {
   name: 'Board',
   data(){
     return {
-      viewArchive: false
     }
   },
   components: {
     TaskStatus,
-    Archive
   }
  
 }

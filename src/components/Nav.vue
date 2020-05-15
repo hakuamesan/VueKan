@@ -14,8 +14,8 @@
         label-for="input-1"
       >
         <b-form-input
-          id="input-1"
-          v-model="form.taskName"
+          id="taskName"
+          v-model="taskName"
           type="text"
           required
           placeholder="Enter task"
@@ -24,8 +24,8 @@
 
       <b-form-group id="input-group-2" label="Description:" label-for="input-2">
         <b-form-input
-          id="input-2"
-          v-model="form.taskDescription"
+          id="taskDescription"
+          v-model="taskDescription"
           placeholder="Description"
         ></b-form-input>
       </b-form-group>
@@ -43,10 +43,8 @@ export default {
   name:'Mynav',
     data() {
       return {
-        form: {
-          taskName: '',
-          taskDescription: '',
-        },
+        taskName: '',
+        taskDescription: '',
         show: true
       }
     },
@@ -56,9 +54,10 @@ export default {
       },
       onSubmit(e) {
         e.preventDefault()
-        console.log(JSON.stringify(this.form))
         this.$emit('update-task', { taskName: this.taskName, taskDescription: this.taskDescription})
         let task = { taskName: this.taskName, taskDescription: this.taskDescription}
+        console.log("in nav bar add task:")
+        console.table(task)
         this.$store.commit('addTask', { columnIndex: 0, task});
         this.$nextTick( ()=> {
           this.$bvModal.hide('show-addTask')
@@ -67,8 +66,8 @@ export default {
       onReset(evt) {
         evt.preventDefault()
         // Reset our form values
-        this.form.taskName= ''
-        this.form.taskDescription= ''
+        this.taskName= ''
+        this.taskDescription= ''
         // Trick to reset/clear native browser form validation state
         this.show = false
         this.$nextTick(() => {

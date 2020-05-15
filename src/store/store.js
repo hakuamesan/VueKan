@@ -26,11 +26,19 @@ export const store = new Vuex.Store({
       state.columns[columnIndex].tasks.splice(taskIndex, 1)
     },
     addTask (state, { columnIndex, task }) {
+    console.log("adding tasks:")
+    console.table(task)
+
       state.columns[columnIndex].tasks.push(task)
     },
     updateTasks (state, { columnIndex, tasks }) {
       state.columns[columnIndex].tasks = tasks
     },
+    updateTask (state, { columnIndex, taskIndex, taskName, taskDescription }) {
+      state.columns[columnIndex].tasks[taskIndex].name = taskName
+      state.columns[columnIndex].tasks[taskIndex].description = taskDescription
+    },
+
 
   }
 });
