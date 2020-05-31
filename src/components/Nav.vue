@@ -19,6 +19,8 @@
           type="text"
           required
           placeholder="Enter task"
+          ref="taskName1"
+          autofocus
         ></b-form-input>
       </b-form-group>
 
