@@ -5,6 +5,11 @@
 
       <div class="flex-container">
       <div id="tdate">  {{ getDate() }} </div>
+      <div id="move" class="fa fa-play" 
+                     style="display: flex; float: right; padding-right: 0.5rem;"
+                     @click="$emit('move')"
+                     title="Move"></div>
+
       <div id="trash" class="fa fa-trash"
             style="display: flex; float: right"
             @click="$emit('remove-task')"
@@ -20,8 +25,7 @@
 
 export default{
   name: 'Task',
-  props: ['value']
-  ,
+  props: ['value'],
   data() {
     return {
       viewDesc: false
