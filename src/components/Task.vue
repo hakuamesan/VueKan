@@ -75,7 +75,7 @@ export default{
   flex-direction: row;
   padding-right: 5px;
   margin-right: 5px;
-  align-items: flex-start;
+  align-items: flex-end;
 /*  justify-content: space-between;*/
 }
 b-card {
