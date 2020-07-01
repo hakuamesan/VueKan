@@ -2,6 +2,7 @@ dependencies:
   bootstrap: 4.5.0
   bootstrap-vue: 2.14.0_vue@2.6.11
   core-js: 3.6.5
+  dragula: 3.7.2
   vue: 2.6.11
   vuedraggable: 2.23.2
   vuex: 3.4.0_vue@2.6.11
@@ -1704,6 +1705,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-x57Zf380y48robyXkLzDZkdLS3k=
+  /atoa/1.0.0:
+    dev: false
+    resolution:
+      integrity: sha1-DMDpGkgOc4+SPrwQNnZHF3mzSkk=
   /atob/2.1.2:
     dev: true
     engines:
@@ -2523,6 +2528,13 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-hIP3EEPs8tB9AT1L+NUqtwOAps4mk2Zob89MWXMHjHWg9milF/j4osnnQLXBCBFBk/tvIG/tUc9mOUJiPBhPXA==
+  /contra/1.9.4:
+    dependencies:
+      atoa: 1.0.0
+      ticky: 1.0.1
+    dev: false
+    resolution:
+      integrity: sha1-9TveQtfltZhcrk2ZqNYQUm3o8o0=
   /convert-source-map/1.7.0:
     dependencies:
       safe-buffer: 5.1.2
@@ -2662,6 +2674,12 @@ packages:
       node: '>= 8'
     resolution:
       integrity: sha512-PD6G8QG3S4FK/XCGFbEQrDqO2AnMMsy0meR7lerlIOHAAbkuavGU/pOqprrlvfTNjvowivTeBsjebAL0NSoMxw==
+  /crossvent/1.5.4:
+    dependencies:
+      custom-event: 1.0.0
+    dev: false
+    resolution:
+      integrity: sha1-2ixPj0DJR4JRe/K+7BBEFIGUq5I=
   /crypto-browserify/3.12.0:
     dependencies:
       browserify-cipher: 1.0.1
@@ -2853,6 +2871,10 @@ packages:
       node: '>=8.0.0'
     resolution:
       integrity: sha512-NL3spysxUkcrOgnpsT4Xdl2aiEiBG6bXswAABQVHcMrfjjBisFOKwLDOmf4wf32aPdcJws1zds2B0Rg+jqMyHQ==
+  /custom-event/1.0.0:
+    dev: false
+    resolution:
+      integrity: sha1-LkYovhncSyFLXAJjDFlx6BFhgGI=
   /cyclist/1.0.1:
     dev: true
     resolution:
@@ -3124,6 +3146,13 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
+  /dragula/3.7.2:
+    dependencies:
+      contra: 1.9.4
+      crossvent: 1.5.4
+    dev: false
+    resolution:
+      integrity: sha1-SjXJ05gf+sGpScKcpyhQWOhzk84=
   /duplexer/0.1.1:
     dev: true
     resolution:
@@ -7861,6 +7890,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-eHY7nBftgThBqOyHGVN+l8gF0BucP09fMo0oO/Lb0w1OF80dJv+lDVpXG60WMQvkcxAkNybKsrEIE3ZtKGmPrA==
+  /ticky/1.0.1:
+    dev: false
+    resolution:
+      integrity: sha1-t8+nHnaPHJAAxJe5FRswlHxQ5G0=
   /timers-browserify/2.0.11:
     dependencies:
       setimmediate: 1.0.5
@@ -8681,6 +8714,7 @@ specifiers:
   bootstrap: ^4.5.0
   bootstrap-vue: ^2.14.0
   core-js: ^3.6.4
+  dragula: ^3.7.2
   eslint: ^6.7.2
   eslint-plugin-vue: ^6.2.2
   vue: ^2.6.11
