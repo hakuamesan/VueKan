@@ -25,6 +25,10 @@ export const store = new Vuex.Store({
     removeTask (state, { columnIndex, taskIndex }) {
       state.columns[columnIndex].tasks.splice(taskIndex, 1)
     },
+    moveTask (state, { columnIndex, taskIndex, taskName, taskDate }){
+      console.log("cur colIndex = " + columnIndex + " taskIndex=" + taskIndex); 
+      console.log("taskName = " + taskName + " taskDate = " + taskDate)
+    },
     addTask (state, { columnIndex, task }) {
     console.log("adding tasks:")
     console.table(task)

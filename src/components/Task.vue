@@ -2,15 +2,15 @@
   <div class="mt-3">
     <b-card >
       <div id="tname">  {{ value.taskName }}</div>
+      <div id="tdate">  {{ getDate() }} </div>
 
       <div class="flex-container">
-      <div id="tdate">  {{ getDate() }} </div>
-      <div id="move" class="fa fa-play" 
-                     style="display: flex; float:left; padding-left: 0.5rem;"
-                     @click="$emit('move')"
+        <div id="move" class="fa fa-play" 
+                     style="padding-right:10px;"
+                     @click="$emit('move-task')"
                      title="Move"></div>
-
-      <div id="trash" class="fa fa-trash"
+  
+        <div id="trash" class="fa fa-trash"
             style="display: flex; float: right"
             @click="$emit('remove-task')"
             title="Remove Task"></div>
@@ -39,7 +39,16 @@ export default{
       console.log(d.toDateString())
 
       return d.toDateString()
-    }
+    }, 
+    movetask: function(taskIndex, { taskName, taskDescription}) {
+      this.$store.commit('moveTask', {
+        columnIndex: this.columnIndex,
+        taskIndex,
+        taskName,
+        taskDescription
+      })
+    },
+
   }
 }
 </script>
@@ -48,25 +57,31 @@ export default{
 /*
 *{
   outline: 1px solid red;
-}*/
-
+}
+*/
 #tname{
   text-align: left;
   padding-bottom: .5rem;
 }
 
 #tdate{
+  float: left;
   text-align: right;
   color: darkgreen;
 }
 
 .flex-container{
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  padding-right: 5px;
+  margin-right: 5px;
+  align-items: flex-start;
+/*  justify-content: space-between;*/
 }
 b-card {
   padding: 0.5rem;
   margin-bottom: .5rem;
+  flex-direction: column;
 }
 </style>
 

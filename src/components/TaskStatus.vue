@@ -2,7 +2,7 @@
   <div class="col-sm">
     <p class="column-title"> {{ colName }} </p>
 
-    <draggable v-model="tasks" group='tasks' style="min-height:100px">
+    <draggable v-model="tasks" group='tasks' >
       <Task v-for="(task, index) in tasks" 
         :key="task.name" 
         :value="task"
