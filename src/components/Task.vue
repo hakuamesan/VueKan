@@ -6,7 +6,7 @@
       <div class="flex-container">
       <div id="tdate">  {{ getDate() }} </div>
       <div id="move" class="fa fa-play" 
-                     style="display: flex; float: right; padding-right: 0.5rem;"
+                     style="display: flex; float:left; padding-left: 0.5rem;"
                      @click="$emit('move')"
                      title="Move"></div>
 
