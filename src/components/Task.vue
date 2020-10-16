@@ -5,11 +5,7 @@
       <div id="tdate">  {{ getDate() }} </div>
 
       <div class="flex-container">
-        <div id="move" class="fa fa-play" 
-                     style="padding-right:10px;"
-                     @click="$emit('move-task')"
-                     title="Move"></div>
-  
+        
         <div id="trash" class="fa fa-trash"
             style="display: flex; float: right"
             @click="$emit('remove-task')"

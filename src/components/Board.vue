@@ -28,7 +28,25 @@ export default {
 
 html, body, #myboard {
   background-color: rgba(186,255,255,.5);
+  margin:0;
+  overflow: hidden;
 }
+body::-webkit-scrollbar {
+  width: 5px;               /* width of the entire scrollbar */
+}
+
+* {
+  scrollbar-width: thin;
+}
+
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+}
+
 #todo{
   background-color: rgba(186,225,255,.7);
   overflow-y: auto;
@@ -36,6 +54,7 @@ html, body, #myboard {
   height: 900px;
   width: 33%;
   box-sizing: border-box;
+  margin:1px;
 }
 
 #doing{
