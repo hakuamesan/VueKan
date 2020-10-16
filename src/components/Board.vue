@@ -31,14 +31,29 @@ html, body, #myboard {
 }
 #todo{
   background-color: rgba(186,225,255,.7);
+  overflow-y: auto;
+  float: left;
+  height: 900px;
+  width: 33%;
+  box-sizing: border-box;
 }
 
 #doing{
   background-color: rgba(255,223,186,.7);
+  overflow-y: auto;
+  float: left;
+  height: 900px;
+  width: 33%;
+  box-sizing: border-box;
 }
 
 #done{
   background-color: rgba(186,255,201,.7);
+  overflow-y: auto;
+  float: left;
+  height: 900px;
+  width: 33%;
+  box-sizing: border-box;
 }
 
 .col-sm, .row, .column {
