@@ -78,6 +78,7 @@ b-card {
   padding: 0.5rem;
   margin-bottom: .5rem;
   flex-direction: column;
+  border-radius: 15;
 }
 </style>
 

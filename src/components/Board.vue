@@ -55,6 +55,7 @@ body::-webkit-scrollbar {
   width: 33%;
   box-sizing: border-box;
   margin:1px;
+  border-radius: 5;
 }
 
 #doing{
@@ -64,6 +65,7 @@ body::-webkit-scrollbar {
   height: 900px;
   width: 33%;
   box-sizing: border-box;
+  border-radius: 25;
 }
 
 #done{
@@ -73,6 +75,7 @@ body::-webkit-scrollbar {
   height: 900px;
   width: 33%;
   box-sizing: border-box;
+  border-radius: 15px;
 }
 
 .col-sm, .row, .column {

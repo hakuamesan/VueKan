@@ -87,7 +87,8 @@ export default{
   background-color: white;
   margin-top: 1rem;
   text-align: left;
-
+  border-radius: 5px;
+  padding: .1rem;
 }
 </style>
 
