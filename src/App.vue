@@ -30,8 +30,5 @@ export default {
 
 #app {
   @apply container-fluid;
-
 }
-
-
 </style>

@@ -5,15 +5,12 @@
       <div id="tdate">  {{ getDate() }} </div>
 
       <div class="flex-container">
-        
         <div id="trash" class="fa fa-trash"
             style="display: flex; float: right"
             @click="$emit('remove-task')"
             title="Remove Task"></div>
       </div>
     </b-card>
-
-
   </div>
 </template>
 
