@@ -14,3 +14,6 @@ Items can be dragged using the Dragula library.
 - Vuex 
 - Dragula
 
+
+Version 2 will be released soon.
+
